@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RestController
+//@RestController
 public class SpringboothelloworldApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringboothelloworldApplication.class, args);
     }
-    @GetMapping("/hello")
-    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return String.format("Hello %s!", name);
-    }
-
+    //Disabled due to duplicated.
+    // @GetMapping("/hello")
+    // public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+    //     return String.format("Hello %s!", name);
+    //  }
 }
