@@ -18,7 +18,21 @@
         <java.version>11</java.version>
     </properties>
 
+    <repositories>
+        <repository>
+        <!--url>https://raw.github.com/a1930yn/qzqsm-sdk/mvn-repo/</url-->
+        <!--url>https://github.com/a1930yn/qzqsm-sdk/tree/mvn-repo/</-url-->
+            <id>qzqsm-sdk</id>
+            <url>https://github.com/a1930yn/qzqsm-sdk/tree/mvn-repo/</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <dependency>
+            <groupId>jp.ac.aiit.pbl</groupId>
+            <artifactId>qzqsm-sdk</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -48,6 +62,10 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
         </dependency>
     </dependencies>
 
