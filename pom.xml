@@ -18,14 +18,14 @@
         <java.version>11</java.version>
     </properties>
 
-    <repositories>
-        <repository>
+    <!-- <repositories> -->
+        <!-- <repository> -->
         <!--url>https://raw.github.com/a1930yn/qzqsm-sdk/mvn-repo/</url-->
         <!--url>https://github.com/a1930yn/qzqsm-sdk/tree/mvn-repo/</-url-->
-            <id>qzqsm-sdk</id>
-            <url>https://raw.github.com/a1930yn/qzqsm-sdk/mvn-repo/</url>
-        </repository>
-    </repositories>
+            <!-- <id>qzqsm-sdk</id> -->
+            <!-- <url>https://raw.github.com/a1930yn/qzqsm-sdk/mvn-repo/</url> -->
+        <!-- </repository> -->
+    <!-- </repositories> -->
 
     <dependencies>
         <dependency>
