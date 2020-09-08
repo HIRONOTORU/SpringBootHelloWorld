@@ -23,7 +23,7 @@
         <!--url>https://raw.github.com/a1930yn/qzqsm-sdk/mvn-repo/</url-->
         <!--url>https://github.com/a1930yn/qzqsm-sdk/tree/mvn-repo/</-url-->
             <id>qzqsm-sdk</id>
-            <url>https://github.com/a1930yn/qzqsm-sdk/tree/mvn-repo/</url>
+            <url>https://raw.github.com/a1930yn/qzqsm-sdk/mvn-repo/</url>
         </repository>
     </repositories>
 
@@ -32,6 +32,8 @@
             <groupId>jp.ac.aiit.pbl</groupId>
             <artifactId>qzqsm-sdk</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/qzqsm-sdk.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
