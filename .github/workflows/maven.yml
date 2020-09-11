@@ -26,7 +26,7 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Maven Wrapper chmod
       run: chmod u+x ./mvnw
-    - name: Build with Maven Wrappe
+    - name: Build with Maven Wrapper
       run: ./mvnw package
 
     - uses: actions/upload-artifact@v2
