@@ -62,4 +62,5 @@ jobs:
       env:
         EC2_USER: ${{ secrets.EC2_USER }}
         EC2_HOST: ${{ secrets.EC2_HOST }}
-      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./start.bash &"
+      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./start.bash"
+      timeout-minutes: 1

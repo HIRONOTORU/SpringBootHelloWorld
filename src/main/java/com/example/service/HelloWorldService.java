@@ -10,6 +10,6 @@ public class HelloWorldService {
     
     public String getHelloWorldAndTime(){
         LocalDateTime helloWorldTime = LocalDateTime.now();
-        return "HelloWorld" + " " + helloWorldTime;
+        return "HelloWorld" + " " + helloWorldTime + "time out test.";
     }
 }
