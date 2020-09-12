@@ -40,8 +40,26 @@ jobs:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: echo "$SECRET_KEY" > keyfile && chmod 600 keyfile
 
+    - name: stop at EC2
+      env:
+        EC2_USER: ${{ secrets.EC2_USER }}
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./stop.bash"
+
+    - name: sleep 29
+      rum: sleep 29
+
     - name: scp artifact to EC2
       env:
         EC2_USER: ${{ secrets.EC2_USER }}
         EC2_HOST: ${{ secrets.EC2_HOST }}
       run: scp -o 'StrictHostKeyChecking no' -i keyfile target/springboothelloworld-0.0.1-SNAPSHOT.jar "$EC2_USER"@"$EC2_HOST":~/
+
+    - name: sleep 31
+      rum: sleep 31
+
+    - name: start at EC2
+      env:
+        EC2_USER: ${{ secrets.EC2_USER }}
+        EC2_HOST: ${{ secrets.EC2_HOST }}
+      run: ssh -o 'StrictHostKeyChecking no' ${EC2_USER}@${EC2_HOST} -i keyfile "./start.bash"
